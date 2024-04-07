@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../../core/Model/object-model';
 import { Router } from '@angular/router';
@@ -32,6 +32,13 @@ export class SigninSignupComponent {
     }else if(this.href =='/sign-in'){
       this.regForm = false;
     }
+  
+    
+   
+
+
+
+
 
     this.signUpfrom = this.formBuilder.group({
       name: ['', Validators.required],
