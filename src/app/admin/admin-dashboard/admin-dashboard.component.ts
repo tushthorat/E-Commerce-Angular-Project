@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginSignupService } from '../../shared/services/login-signup.service';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -7,6 +9,8 @@ import { Component } from '@angular/core';
   templateUrl: './admin-dashboard.component.html',
   styleUrl: './admin-dashboard.component.css'
 })
-export class AdminDashboardComponent {
+export class AdminDashboardComponent{
+  
+
 
 }
