@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { User } from '../../core/Model/object-model';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { LoginSignupService } from '../../shared/services/login-signup.service';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-signin-signup',
   standalone: true,
-  imports: [],
+  imports: [CommonModule,RouterLink, HttpClientModule, ReactiveFormsModule, FormsModule],
   templateUrl: './signin-signup.component.html',
   styleUrl: './signin-signup.component.css'
 })
