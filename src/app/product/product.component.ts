@@ -27,8 +27,9 @@ export class ProductComponent implements OnInit {
   constructor(private fb:FormBuilder, private router:Router, private productService:ProductService){
 
   }
+
   ngOnInit(): void {
-    this.addEditProductDForm=this.fb.group({
+    this.addEditProductDForm = this.fb.group({
       name:['',Validators.required],
       uploadPhoto:['',Validators.required],
       productDesc:['',Validators.required],
@@ -37,35 +38,37 @@ export class ProductComponent implements OnInit {
       status:['',Validators.required],
 
     })
+    this.getAllProduct()
   }
+
   get rf(){
     return this.addEditProductDForm.controls;
   }
+
   getAllProduct(){
-    return this.productService.allProduct().subscribe(data=>{
-        this.all_product_data=data;
-        console.log("my all product",this.all_product_data);
-    },error=>{
-      console.log("something went wrong",error);
-    }
-  )
+    this.productService.allProduct().subscribe(data =>{
+      this.all_product_data = data;
+      console.log("My All product", this.all_product_data)
+    }, error =>{
+      console.log("Somthing went wrong ", error)
+    })
   }
 
   addProductPopup(){
-    this.add_prouct=true;
-    this.edit_prouct=false;
-    this.popup_header="Add new product";
+    this.add_prouct = true;
+    this.edit_prouct = false;
+    this.popup_header = "Add new Product";
     this.addEditProductDForm.reset();
   }
 
   addNewProduct(){
-    this.addEditProduct=true;
+    this.addEditProduct = true;
     if(this.addEditProductDForm.invalid){
       return;
     }
-    this.prouct_data=this.addEditProductDForm.value;
-    this.product_dto={
-       id:0,
+    this.prouct_data = this.addEditProductDForm.value;
+    this.product_dto = {
+      id:0,
       name:this.prouct_data.name,
       uploadPhoto:this.prouct_data.uploadPhoto,
       productDesc:this.prouct_data.productDesc,
@@ -77,19 +80,20 @@ export class ProductComponent implements OnInit {
       console.log(data);
       this.getAllProduct();
     },error=>{
-      console.log("my error",error);
-    } )
+      console.log("my error", error)
+    })
   }
 
-  editProductPopup(id:any){
-     this.add_prouct=false;
-     this.edit_prouct=true;
-     this.popup_header="Edit Product";
-     this.addEditProductDForm.reset();
-     this.productService.singleProduct(id).subscribe(data=>{
-      this.single_product_data=data;
-      console.log("single dat",this.single_product_data);
-      this.edit_product_id=data.id;
+
+    editProductPopup(id:any){
+    this.add_prouct = false;
+    this.edit_prouct = true;
+    this.popup_header = "Edit Product";
+    this.addEditProductDForm.reset();
+    this.productService.singleProduct(id).subscribe(data=>{
+      this.single_product_data = data;
+      console.log("Single Data", this.single_product_data);
+      this.edit_product_id = data.id;
       this.addEditProductDForm.setValue({
         name:this.single_product_data.name,
         uploadPhoto:this.single_product_data.uploadPhoto,
@@ -98,10 +102,9 @@ export class ProductComponent implements OnInit {
         dp:this.single_product_data.dp,
         status:this.single_product_data.status
       })
-     })
+    })
   }
-
-
+  
   updateProduct(){
     this.addEditProduct = true;
     if(this.addEditProductDForm.invalid){

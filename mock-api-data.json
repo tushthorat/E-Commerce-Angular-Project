@@ -26,7 +26,7 @@
       "uploadPhoto": "ashish.png",
       "agreetc": true,
       "role": "admin",
-      "id": 1
+      "id": "1"
     },
     {
       "aboutYou": "HGHJBHMBMBNHTRTYRYgfhfjfjh",
@@ -175,24 +175,6 @@
       "mrp": "123",
       "dp": "99",
       "status": "publish"
-    },
-    {
-      "id": "3",
-      "name": "Metro Living Self Design Pillows Cover",
-      "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/jjsw4nk0/cushion-pillow-cover/e/z/z/epl12-metro-living-original-imaf7ah6zstjyevd.jpeg",
-      "productDesc": "Regional Speciality\nRajasthan\nFabric Care\nMachinne Wash, Do not Bleach, Wash in Cold Water\nThread Count\n104\nSales Package\nPack of 2 Pillow Cover",
-      "mrp": "500",
-      "dp": "399",
-      "status": "draft"
-    },
-    {
-      "id": "4",
-      "name": "Metro Living Self Design Pillows Cover",
-      "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/jjsw4nk0/cushion-pillow-cover/e/z/z/epl12-metro-living-original-imaf7ah6zstjyevd.jpeg",
-      "productDesc": "Regional Speciality\nRajasthan\nFabric Care\nMachinne Wash, Do not Bleach, Wash in Cold Water\nThread Count\n104\nSales Package\nPack of 2 Pillow Cover",
-      "mrp": "500",
-      "dp": "399",
-      "status": "draft"
     },
     {
       "id": "5",
